@@ -12,16 +12,34 @@ This project is a meant to simulate the building and managing of an enterprise-g
 - Planning network topologies, segmentation (e.g., VLANs/Subnets)
 - Evaluating infrastructure trade-offs: on-prem vs. cloud vs. hybrid
 
-📑 Fully documented with diagrams and setup instructions
-
 ♻️ Easily extendable: add LDAP, proxy servers, monitoring tools, cloud tools, etc.
 
-### What's Inside
-- docker-compose.yml - for quick environment setup
-- docs/ - with service-by-service implementation details
-- config/ - for persistent configuration across services
+### What's does the repo consist of:
 
-### Sample topologies, standards, and planning notes
+#### - README.md file
+- Overview of your lab and its purpose
+- How to spin up services
+- What technologies are used
+Diagrams (optional but encouraged)
+
+#### - docker-compose.yml file
+- Define services like:
+- Technitium DNS
+- Uptime Kuma (monitoring)
+- Nginx Reverse Proxy
+- Maybe even LDAP later
+- Use volumes to persist data
+- Configure ports and environment variables
+
+#### - docs/ Folder
+- Write detailed markdown files for each service and component:
+- Why it's used
+- How it's configured
+- What it's replacing in the real world (e.g., Technitium = internal DNS)
+- Security considerations
+
+#### - .env File
+- For any private variables for configurations.
 
 This lab environment is ideal for aspiring IT professionals, system administrators, and homelab builders looking to strengthen their infrastructure knowledge by simulating how small to medium businesses might build and manage their internal networks.
 
